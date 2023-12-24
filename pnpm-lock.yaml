@@ -20,9 +20,6 @@ dependencies:
   react-redux:
     specifier: ^9.0.4
     version: 9.0.4(@types/react@18.2.45)(react@18.2.0)(redux@5.0.1)
-  redux-thunk:
-    specifier: ^3.1.0
-    version: 3.1.0(redux@5.0.1)
 
 devDependencies:
   '@redux-devtools/extension':
