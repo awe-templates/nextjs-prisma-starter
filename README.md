@@ -7,13 +7,17 @@ In this project, we going to use [Tailwind CSS](https://tailwindcss.com/) as a C
 First, run the development server:
 
 ```bash
-npm run dev
-# or
-yarn dev
 # or
 pnpm dev
+
 # or
 bun dev
+
+# or
+npm run dev
+
+# or
+yarn dev
 ```
 
 ## Learn More
