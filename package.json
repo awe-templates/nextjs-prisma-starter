@@ -7,18 +7,32 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prettier": "prettier --write app/"
+    "prettier": "prettier --write app/",
+    "~~~~~~~~~~~~~~~~ prisma orm ~~~~~~~~~~~~~~~~~": "https://www.prisma.io/docs/orm/prisma-migrate/workflows/seeding",
+    "p:migrate": "npx prisma migrate dev",
+    "p:seed": "npx prisma db seed",
+    "p:freshseed": "npx prisma migrate reset",
+    "p:generate": "npx prisma generate",
+    "p:m": "npm run p:migrate",
+    "p:s": "npm run p:seed",
+    "p:fs": "npm run p:freshseed",
+    "p:g": "npm run p:generate"
   },
   "dependencies": {
+    "@faker-js/faker": "^8.4.1",
     "@reduxjs/toolkit": "^2.2.5",
+    "bcrypt": "^5.1.1",
     "next": "14.2.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-redux": "^9.1.2",
-    "redux": "^5.0.1"
+    "redux": "^5.0.1",
+    "ts-node": "^10.9.2"
   },
   "devDependencies": {
+    "@prisma/client": "5.15.0",
     "@redux-devtools/extension": "^3.3.0",
+    "@types/bcrypt": "^5.0.2",
     "@types/node": "^20.14.2",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
@@ -28,7 +42,15 @@
     "eslint-config-next": "14.0.4",
     "postcss": "^8.4.38",
     "prettier": "^3.3.2",
+    "prisma": "^5.15.0",
     "tailwindcss": "^3.4.4",
+    "tsx": "^4.15.5",
     "typescript": "^5.4.5"
+  },
+  "prisma": {
+    "seed": "ts-node ./prisma/seeders/seeder.ts"
+  },
+  "@snaplet/seed": {
+    "config": "prisma/seed/seed.config.ts"
   }
 }
