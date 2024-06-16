@@ -1,0 +1,19 @@
+version: "3"
+
+services:
+  # Database
+  nextjs_starter_postgres:
+    image: postgres:latest
+    container_name: nextjs_starter_postgres
+    restart: unless-stopped
+    ports:
+      - ${DATABASE_PORT}:5432
+    volumes:
+      - nextjs_starter_db_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: ${DATABASE_NAME}
+      POSTGRES_USER: ${DATABASE_USER}
+      POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
+
+volumes:
+  nextjs_starter_db_data:
