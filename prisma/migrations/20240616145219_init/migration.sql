@@ -11,6 +11,7 @@ CREATE TABLE "User" (
     "password" TEXT NOT NULL,
     "name" TEXT,
     "surname" TEXT,
+    "avatar" TEXT,
     "gender" "Gender",
     "dob" DATE,
     "role" "Role" NOT NULL DEFAULT 'USER',

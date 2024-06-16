@@ -33,6 +33,7 @@ model User {
     password String
     name     String?
     surname  String?
+    avatar   String?
     gender   Gender?
     dob      DateTime? @db.Date
     role     Role      @default(USER)

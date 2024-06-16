@@ -32,6 +32,7 @@ async function userSeeder(): Promise<void> {
       min: 1950,
       max: 2005
     }),
+    avatar: faker.image.avatar(),
     gender: Gender.NON_BINARY,
     role: Role.ADMIN
   })
@@ -50,6 +51,7 @@ async function userSeeder(): Promise<void> {
             min: 1950,
             max: 2005
           }),
+          avatar: faker.image.avatar(),
           gender: faker.helpers.arrayElement(Object.values(Gender)),
           role: Role.USER
         }
