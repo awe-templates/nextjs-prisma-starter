@@ -1,6 +1,7 @@
 import { PrismaClient } from "@prisma/client"
 import dayjs from "dayjs"
 import { Metadata } from "next"
+import UserLayout from "../components/layouts/userLayout"
 
 const prisma = new PrismaClient()
 
@@ -34,23 +35,25 @@ export default async function Page() {
 
   return (
     <>
-      <h1 className="pb-2 mx-5 mb-2 text-2xl border-b border-gray-500">Registered Users</h1>
+      <UserLayout>
+        <h1 className="pb-2 mx-5 mb-2 text-2xl border-b border-gray-500">Registered Users</h1>
 
-      <ul className="list-none">
-        {_users.map((user: any, index: number) => (
-          <li key={index} className="flex flex-row items-center gap-2 m-5">
-            <img
-              src={user.avatar || "https://robohash.org/XX"}
-              alt={user.name || "Unknown"}
-              className="w-10 h-10 rounded-lg"
-              height={40}
-              width={40}
-            />
+        <ul className="list-none">
+          {_users.map((user: any, index: number) => (
+            <li key={index} className="flex flex-row items-center gap-2 m-5">
+              <img
+                src={user.avatar || "https://robohash.org/XX"}
+                alt={user.name || "Unknown"}
+                className="w-10 h-10 rounded-lg"
+                height={40}
+                width={40}
+              />
 
-            <span>{`${user.name} ${user.surname} (${user["age"]} yo)`}</span>
-          </li>
-        ))}
-      </ul>
+              <span>{`${user.name} ${user.surname} (${user["age"]} yo)`}</span>
+            </li>
+          ))}
+        </ul>
+      </UserLayout>
     </>
   )
 }
