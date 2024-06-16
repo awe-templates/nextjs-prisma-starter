@@ -13,6 +13,7 @@
     "p:seed": "npx prisma db seed",
     "p:freshseed": "npx prisma migrate reset",
     "p:generate": "npx prisma generate",
+    "p:studio": "npx prisma studio",
     "p:m": "npm run p:migrate",
     "p:s": "npm run p:seed",
     "p:fs": "npm run p:freshseed",
