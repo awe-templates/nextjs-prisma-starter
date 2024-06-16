@@ -15,9 +15,6 @@ bun dev
 
 # or
 npm run dev
-
-# or
-yarn dev
 ```
 
 ## Quick Prisma ORM Commands
